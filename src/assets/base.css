@@ -10,13 +10,14 @@ body {
 header {
   padding: 60px;
   text-align: center;
-  background: #1abc9c;
+  background: darkolivegreen;
   color: white;
 }
 
 nav {
   display: flex;
   background-color: #333;
+  justify-content: center;
 }
 
 /* Style the navigation bar links */
@@ -42,26 +43,47 @@ nav a:hover {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 aside {
-  flex: 30%;
+  flex: 25%;
   background-color: #f1f1f1;
   padding: 20px;
 }
 
 /* Main column */
 .main {
-  flex: 70%;
+  flex: 75%;
   background-color: white;
   padding: 20px;
 }
 
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-/* Footer */
+.book-item {
+  background-color: #F1F1F1;
+  margin: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.pop-container .book-item { border: solid 1px #FFF; width: 80%; }
+.books-container .book-item { width: 20%; }
+
+.book-title { font-weight: bold; }
+.price { font-size: 0.8em }
+
+.book-item img { width: 100%; }
+button.look { width: 100%; }
+button.look:hover { cursor: pointer }
+
+.pop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 footer {
   padding: 20px;
   text-align: center;
