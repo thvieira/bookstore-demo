@@ -1,6 +1,6 @@
 # bookstore-demo
 
-Lorem ipsum...
+EM CONSTRUÇÃO!
 
 ## Project Setup
 
