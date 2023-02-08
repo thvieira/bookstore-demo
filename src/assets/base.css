@@ -78,6 +78,10 @@ aside {
 button.look { width: 100%; }
 button.look:hover { cursor: pointer }
 
+#search-form { display: flex; width: 80% }
+#search-bar { width: 90%; padding: 5px;}
+#search-button { width: 10%;background-color: #333;color: #FFF;border: none;border-radius: 2px;cursor: pointer; }
+
 .pop-container {
   display: flex;
   flex-direction: column;
