@@ -68,6 +68,10 @@ aside {
   text-align: center;
 }
 
+#visited-area { justify-content: flex-start !important; }
+#visited-area .book-item { max-width: 190px; font-size: 14px }
+#visited-area .book-item figcaption img { height: 200px }
+
 .pop-container .book-item { border: solid 1px #FFF; width: 80%; }
 .books-container .book-item { width: 20%; }
 

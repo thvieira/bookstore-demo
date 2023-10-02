@@ -1,6 +1,10 @@
 # bookstore-demo
 
-EM CONSTRUÇÃO!
+Site de exemplo para prática de exercícios de automação de testes. 
+
+Construído com TypeScript e VueJS.
+
+API de back-end implementada em [github.com/thvieira/bookstore-api-demo](https://github.com/thvieira/bookstore-api-demo).
 
 ## Project Setup
 

@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import BookItem from '../components/BookItem.vue'
+  import axios from "axios";
 
   const books = [
     { id: "1", title: "A metamorfose",    price: "R$ 39.90", img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/15cab231238407.5647ac117cafe.jpg" },
@@ -16,6 +17,13 @@
     {id: "10", title: "Morte Sul Peste Oeste", price: "R$ 50.00", img: "https://s3.amazonaws.com/img.iluria.com/product/78CD3B/13383BB/450xN.jpg"},
     {id: "11", title: "Cem anor de solidão", price: "R$ 50.00", img: "https://m.media-amazon.com/images/I/81SQPrWU7SL.jpg"}
   ];
+
+  const visited = [
+    {id: "12", title: "La Patagônia Rebelde", price: "R$ 90.00", img: "https://m.media-amazon.com/images/I/51OsQZy1AVL.jpg"},
+    {id: "13", title: "Nosotros decimos no", price: "R$ 50.00", img: "https://m.media-amazon.com/images/I/81QTOPTMyyL.jpg"},
+    {id: "13", title: "Martin Fierro", price: "R$ 30.00", img: "https://www.bemparana.com.br/wp-content/uploads/2022/07/1537221628-5ba024c8d82af_img_livro_o_gaucho_martin_fierro.jpg"},
+    {id: "13", title: "A conquista do pão", price: "R$ 60.00", img: "https://static21.minhalojanouol.com.br/livrariaterralivre/produto/multifotos/hd/20220909114716_5957994043_DZ.jpg"}
+  ];
 </script>
 
 <template>
@@ -31,13 +39,8 @@
         :img="book.img"
         v-for="(book) in popBooks" />
     </div>
-    <h3>Lançamentos</h3>
-    <div class="news-container">
-      <div class="news-item">
-
-      </div>
-    </div>
   </aside>
+
   <section class="main">
     <h2>QUAL SERÁ TUA PRÓXIMA LEITURA?</h2>
     <div>
@@ -55,6 +58,19 @@
         :img="book.img"
         v-for="(book) in books" />
     </div>
+
+      <h2>Você visitou:</h2>
+      <h5>Resgate o livro que você estava buscando</h5>
+      <div class="books-container" id="visited-area">
+        <BookItem 
+        :id="book.id"
+        :title="book.title"
+        :price="book.price"
+        :img="book.img"
+        v-for="(book) in visited" />
+                
+      </div>
   </section>
+
   </main>
 </template>
