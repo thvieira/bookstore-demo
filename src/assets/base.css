@@ -43,14 +43,14 @@ nav a:hover {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 aside {
-  flex: 25%;
+  flex: 20%;
   background-color: #f1f1f1;
   padding: 20px;
 }
 
 /* Main column */
 .main {
-  flex: 75%;
+  flex: 80%;
   background-color: white;
   padding: 20px;
 }
@@ -68,30 +68,38 @@ aside {
   text-align: center;
 }
 
+.books-container .book-item { 
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%; 
+}
+
+.book-item .book-title { font-weight: bold }
+.book-item .price { font-size: 0.8em }
+.book-item img { margin-bottom: 5px; width: 100%; }
+.book-item button.look { margin-bottom: 2px; width: 80%; }
+.book-item button.look:hover { cursor: pointer }
+
+/* Visited items */ 
 #visited-area { justify-content: flex-start !important; }
 #visited-area .book-item { max-width: 190px; font-size: 14px }
 #visited-area .book-item figcaption img { height: 200px }
 
-.pop-container .book-item { border: solid 1px #FFF; width: 80%; }
-.books-container .book-item { width: 20%; }
-
-.book-title { font-weight: bold; }
-.price { font-size: 0.8em }
-
-.book-item img { width: 100%; }
-button.look { width: 100%; }
-button.look:hover { cursor: pointer }
-
+/* Search area */ 
 #search-form { display: flex; width: 80% }
 #search-bar { width: 90%; padding: 5px;}
 #search-button { width: 10%;background-color: #333;color: #FFF;border: none;border-radius: 2px;cursor: pointer; }
 
+/* Most populars items */ 
+.pop-container .book-item { border: solid 1px #FFF; max-width: 230px; width: 90%; }
 .pop-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Footer */
 footer {
   padding: 20px;
   text-align: center;

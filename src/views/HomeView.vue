@@ -75,13 +75,9 @@
       }
     },
     async beforeMount() {
-      console.log("Antes da página ser montada.");
-      
       this.books = await axios.get("http://localhost:3000/books")
         .then(  (response) => response.data )                       // em caso de sucesso.
         .catch( (error)    => console.log("API FAILS: " + error) ); // em caso de falha.
-      
-      console.log(this.books);
     }
   });
 </script>

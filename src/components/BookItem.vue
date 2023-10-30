@@ -1,12 +1,16 @@
 <template>
   <div class="book-item">
-    <figcaption>
-      <img :src="img" :alt="title" :title="title"/>
-      <span class="book-title">{{title}}</span>
-    </figcaption>
-    <p class="price">R$ {{price}}</p>
-    <button class="look" @click="addToCart(id)">Adicionar ao Carrinho</button>
-    <button class="look" @click="$emit('comprar', id)">Comprar agora</button>
+    <div class="infos">
+      <figcaption>
+        <img :src="img" :alt="title" :title="title"/>
+        <span class="book-title">{{title}}</span>
+      </figcaption>
+      <p class="price">R$ {{price}}</p>
+    </div>
+    <div class="actions">  
+      <button class="look" @click="addToCart(id)">Adicionar ao Carrinho</button>
+      <button class="look" @click="$emit('comprar', id)">Comprar agora</button>
+    </div>
   </div>
 </template>
 
