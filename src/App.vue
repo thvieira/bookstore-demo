@@ -1,6 +1,15 @@
-<script setup lang="ts">
-  import { RouterLink, RouterView } from 'vue-router'
-  const currentYear = new Date().getFullYear();
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { RouterLink, RouterView } from 'vue-router'
+
+export default defineComponent({
+  name: 'App',
+  data() {
+    return { 
+      currentYear: new Date().getFullYear()
+    }
+  }
+});
 </script>
 
 <template>
