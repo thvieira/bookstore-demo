@@ -75,7 +75,7 @@ aside {
   width: 20%; 
 }
 
-.book-item .book-title { font-weight: bold }
+.book-item .book-title { font-weight: bold; max-width: 80%; }
 .book-item .price { font-size: 0.8em }
 .book-item img { margin-bottom: 5px; width: 100%; }
 .book-item button.look { margin-bottom: 2px; width: 80%; }

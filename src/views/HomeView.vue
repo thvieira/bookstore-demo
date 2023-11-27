@@ -24,7 +24,7 @@
     <h5>Destaques de novembro</h5>
     <div class="books-container">
       <BookItem 
-        @removerItem="(id) => apagar(id)"
+        @buy="(id) => buyNow(id)"
 
         :id="book.id"
         :title="book.title"
@@ -78,6 +78,9 @@
       this.books = await axios.get("http://localhost:3000/books")
         .then(  (response) => response.data )                       // em caso de sucesso.
         .catch( (error)    => console.log("API FAILS: " + error) ); // em caso de falha.
+    },
+    methods: {
+      buyNow(bookId: number) { console.log("Comprar agora.") }
     }
   });
 </script>

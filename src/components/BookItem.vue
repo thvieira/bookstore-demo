@@ -9,18 +9,17 @@
     </div>
     <div class="actions">  
       <button class="look" @click="addToCart(id)">Adicionar ao Carrinho</button>
-      <button class="look" @click="$emit('comprar', id)">Comprar agora</button>
+      <button class="look" @click="$emit('buy', id)">Comprar agora</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import axios from "axios";
 
 export default defineComponent({
     name: "Main View",
-    emits: ['comprar'],
+    emits: ['buy'],
     props: {
       id: String,
       title: String,
@@ -28,7 +27,7 @@ export default defineComponent({
       img: String
     },
     methods: {
-      addToCart(bookId) {
+      addToCart(bookId: any) {
         console.log(`Add item to the cart. ID = ${bookId}.`);
       }
     }
