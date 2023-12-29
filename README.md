@@ -8,6 +8,8 @@ A API de back-end é necessária para o correto funcionamento do sistema e está
 
 # Subir o container diretamente do DockerHub
 
+Após executar o comando a seguir, basta acessar o endereço http://localhost:5371/ através do teu navegador.
+
 ```sh
 $ docker run -d -p 5173:5173 --name bookstore-web-demo-from-hub thvieiraid/bookstore-web-demo:latest
 ```
