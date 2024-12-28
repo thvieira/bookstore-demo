@@ -4,7 +4,8 @@ Site de exemplo para prática de exercícios de automação de testes.
 
 Construído com TypeScript e VueJS.
 
-A API de back-end é necessária para o correto funcionamento do sistema e está implementada em [github.com/thvieira/bookstore-api-demo](https://github.com/thvieira/bookstore-api-demo). Recomendo utilizar a API através do Docker.
+A API de back-end é necessária para o correto funcionamento do sistema e está disponível em [github.com/thvieira/bookstore-api-demo](https://github.com/thvieira/bookstore-api-demo). Recomendo utilizar a API através do Docker.
+
 
 # Subir o container diretamente do DockerHub
 
@@ -27,3 +28,4 @@ Então execute uma instância do container Docker:
 ```sh
 $ docker run -d -p 3000:3000 --name bookstore-web-demo bookstore-web-demo
 ```
+
