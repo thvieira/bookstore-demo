@@ -5,7 +5,8 @@ export default defineComponent({
   name: 'Account',
   data () {
     return {
-      name: String
+      name: String,
+      hello: this.$route.params.hello
     }
   },
   created () {
@@ -26,7 +27,7 @@ export default defineComponent({
     </aside>
     <section class="main">
       <h1>Minha conta</h1>
-      <p class="success">Lorem ipsum, teu cadastro foi realizado com sucesso!</p>
+      <p class="success">{{ hello }}, teu cadastro foi realizado com sucesso!</p>
       <div class="account-container">
         <div class="account-item">
           <img src="../assets/img/order.png" alt="Meus pedidos" title="Meus pedidos"/>

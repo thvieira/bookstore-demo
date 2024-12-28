@@ -4,8 +4,9 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'Login',
    methods: {
-    go() {
-        this.$router.push({ path: '/account' });
+    go(submitEvent: any) {
+      let username = submitEvent.target.elements.name.value;
+      this.$router.push({ path: `/account/${username}`});
     }
   }
 });
